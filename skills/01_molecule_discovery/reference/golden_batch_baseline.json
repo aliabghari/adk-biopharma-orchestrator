@@ -1,0 +1,18 @@
+{
+  "golden_batch_id": "GB-2026-N01-009",
+  "timestamp": "2026-06-30T18:00:00Z",
+  "baseline_metrics": {
+    "average_monomer_purity_percent": 98.6,
+    "average_aggregation_percent": 1.2,
+    "cell_viability_percent": 92.8,
+    "yield_g_l": 4.15
+  },
+  "reference_compounds": [
+    {
+      "compound_id": "COMP-9842",
+      "sequence": "ACDEFGHIKLMNPQRSTVWY",
+      "kd_nm": 2.4,
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+# Process 2.0 Kernel-Isolated Sandbox Policy (gVisor OCI Configuration)
+version: "1.0"
+runtime: runsc  # gVisor runtime engine
+security_profile:
+  syscall_filter:
+    allow:
+      - read
+      - write
+      - openat
+      - close
+      - socket
+      - connect
+      - accept
+      - epoll_wait
+    deny_action: KILL  # Immediately terminate on unapproved system calls
+  network_policy:
+    egress:
+      allowed_domains:
+        - biopharmadive.com
+        - fiercebiotech.com
+        - fda.gov
+        - smtp.gmail.com
+      dns_port: 53
+      http_port: 80
+      https_port: 443
+      smtp_port: 465
+  resource_constraints:
+    memory_limit_mb: 512
+    cpu_shares: 1024
+    pids_limit: 64
+  supply_chain:
+    package_manager: uv
+    require_hashes: true
+    pypi_registry: "https://pypi.vetted-proxy.internal/simple"
+    validation_gates:
+      sast: "Bandit"
+      sbom: "Syft"
+  execution_wrapper:
+    path: "skills/05_upstream_bioreactor/scripts/secure_runner.sh"
+    enforce_containerized_isolation: true
+runtime_environment:
+  network_isolation: "strict_offline"
+  allowed_egress_domains: []
+
+

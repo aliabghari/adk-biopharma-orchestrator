@@ -1,0 +1,11 @@
+{
+  "user_type": "Internal",
+  "allowed_scopes": [
+    "https://www.googleapis.com/auth/drive.readonly",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/gmail.compose",
+    "https://www.googleapis.com/auth/calendar.events.freebusy"
+  ],
+  "client_signature_validation": "REQUIRED (Client ID and Client Secret integration gate)",
+  "signature_token": "Set via ADK_OAUTH_TOKEN environment variable — not stored in source"
+}

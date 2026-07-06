@@ -1,0 +1,70 @@
+{
+  "portfolio_name": "Enterprise BioPharma Portfolio Gateway",
+  "overall_progress": 61,
+  "active_ai_agents": 12,
+  "open_risks": 7,
+  "ind_submission_days": 78,
+  "views": {
+    "agile_sprint_metrics": {
+      "kanban_wip_violations": false,
+      "upstream_sprint_points_completed": 14,
+      "downstream_sprint_points_completed": 12,
+      "iteration": "Sprint 3"
+    },
+    "predictive_evm_metrics": {
+      "overall_schedule_variance": -28000.0,
+      "overall_cost_variance": -21000.0,
+      "portfolio_spi": 0.963,
+      "portfolio_cpi": 0.971
+    },
+    "hybrid_status_dashboard": {
+      "active_risks": [
+        "MSPC threshold breach checks on Node 05"
+      ],
+      "milestone_completion_rate": 0.92,
+      "gatekeeping_state": "PASS"
+    }
+  },
+  "telemetry": {
+    "agent_metrics": {
+      "trajectory_efficiency": 0.5,
+      "stuck_loop_rate": 0.5,
+      "hallucination_tracking": 0
+    },
+    "process_quality_metrics": {
+      "cqa_pass_rate": 1.0,
+      "oos_rate": 0.25,
+      "spe_hotelling_t2_breach_frequency": 1
+    },
+    "pm_metrics": {
+      "kanban_node_cycle_time_days": 6.0,
+      "sprint_velocity": 24,
+      "evm_sv_variance": -28000.0,
+      "evm_cv_variance": -21000.0
+    }
+  },
+  "portfolio_tracking_array": [
+    {
+      "timestamp": "2026-07-02T11:26:29.546479",
+      "deltas": {
+        "trajectory_efficiency": -0.5,
+        "stuck_loop_rate": 0.5,
+        "hallucination_tracking": 0,
+        "cqa_pass_rate": 0.0,
+        "oos_rate": 0.25,
+        "spe_hotelling_t2_breach_frequency": 1,
+        "kanban_node_cycle_time_days": 1.0,
+        "sprint_velocity": 4,
+        "evm_sv_variance": 0,
+        "evm_cv_variance": 0
+      }
+    }
+  ],
+  "judge_score": {
+    "headline_relevance_severity_routing": 0.74,
+    "digest_summary_quality_scoring": 0.5,
+    "first_pass_syntax_internal_code_review": 1.0,
+    "runtime_trajectory_efficiency": 1.0,
+    "visual_regression_layout_checks": 0.96
+  }
+}

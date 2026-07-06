@@ -1,0 +1,23 @@
+{
+  "blueprint_name": "IP Legal Patent FTO EDD Blueprint",
+  "version": "1.0.0",
+  "constraints": {
+    "positive_rules": {
+      "tool_handshake_required": true,
+      "use_live_patent_space_tool": true,
+      "required_response_keys": [
+        "patent_id",
+        "title",
+        "assignee",
+        "status"
+      ]
+    },
+    "negative_rules": {
+      "allow_hallucinated_patent_numbers": false,
+      "disallowed_methods": [
+        "direct_model_hallucination",
+        "guessing"
+      ]
+    }
+  }
+}

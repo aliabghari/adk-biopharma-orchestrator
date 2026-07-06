@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Optimization Goal Schema",
+  "description": "Standardized schema for Meta-Governor Automated Evaluation Gate and Kaggle SAE validation parameters.",
+  "type": "object",
+  "properties": {
+    "evaluation_integration": {
+      "type": "object",
+      "properties": {
+        "exam": {
+          "type": "string",
+          "default": "Kaggle Standardized Agent Exams (SAE)"
+        },
+        "track_id": {
+          "type": "string",
+          "default": "agents_for_good_bioprocess_v4"
+        },
+        "required_passing_ceiling": {
+          "type": "number",
+          "default": 1.00
+        }
+      },
+      "required": ["exam", "track_id", "required_passing_ceiling"]
+    },
+    "automation_gate": {
+      "type": "object",
+      "properties": {
+        "passing_threshold": {
+          "type": "number",
+          "default": 1.00
+        },
+        "on_success": {
+          "type": "string",
+          "default": "git merge --approve"
+        },
+        "on_failure": {
+          "type": "string",
+          "default": "abort pipeline and trigger prompt refiner"
+        }
+      },
+      "required": ["passing_threshold", "on_success", "on_failure"]
+    }
+  },
+  "required": ["evaluation_integration", "automation_gate"],
+  "evaluation_integration": {
+    "exam": "Kaggle Standardized Agent Exams (SAE)",
+    "track_id": "agents_for_good_bioprocess_v4",
+    "required_passing_ceiling": 1.00
+  },
+  "automation_gate": {
+    "passing_threshold": 1.00,
+    "on_success": "git merge --approve",
+    "on_failure": "abort pipeline and trigger prompt refiner"
+  }
+}

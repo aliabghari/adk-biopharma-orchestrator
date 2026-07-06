@@ -1,0 +1,16 @@
+{
+  "blueprint_name": "Discovery Large-Molecule Screening EDD Blueprint",
+  "version": "1.0.0",
+  "constraints": {
+    "positive_rules": {
+      "min_affinity_kd_nm": 1.0,
+      "iupac_standard_compliant": true,
+      "max_molecular_weight_da": 150000
+    },
+    "negative_rules": {
+      "disallowed_motifs": ["DG", "NG"],
+      "min_loop_length_cysteines": 5,
+      "max_loop_length_cysteines": 20
+    }
+  }
+}

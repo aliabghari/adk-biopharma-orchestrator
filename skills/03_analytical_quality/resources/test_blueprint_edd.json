@@ -1,0 +1,71 @@
+{
+  "positive_scenarios": [
+    {
+      "id": "POS_01",
+      "description": "Standard cell line validation with complete CQA profile.",
+      "input": {
+        "current_stage": "node_04",
+        "quality_status": "PASS",
+        "cqa_profile": {
+          "purity": 0.99,
+          "viability": 0.88
+        }
+      },
+      "expected_route": "to_bioreactor"
+    },
+    {
+      "id": "POS_02",
+      "description": "Standard bioreactor run validation.",
+      "input": {
+        "current_stage": "node_05",
+        "quality_status": "PASS",
+        "cqa_profile": {
+          "titer": 2.6,
+          "viability": 0.85
+        }
+      },
+      "expected_route": "to_purification"
+    },
+    {
+      "id": "POS_03",
+      "description": "Standard purification validation.",
+      "input": {
+        "current_stage": "node_06",
+        "quality_status": "PASS",
+        "cqa_profile": {
+          "purity": 0.992
+        }
+      },
+      "expected_route": "to_preclinical"
+    }
+  ],
+  "negative_scenarios": [
+    {
+      "id": "NEG_01",
+      "description": "Out-of-specification failure status.",
+      "input": {
+        "current_stage": "node_05",
+        "quality_status": "FAIL",
+        "error_code": "PAT_DATA_GAP_ABORT"
+      },
+      "expected_route": "OOS_FAIL"
+    },
+    {
+      "id": "NEG_02",
+      "description": "Missing current_stage in validation payload.",
+      "input": {
+        "quality_status": "PASS"
+      },
+      "expected_route": "to_preclinical"
+    },
+    {
+      "id": "NEG_03",
+      "description": "Invalid quality status type.",
+      "input": {
+        "current_stage": "node_05",
+        "quality_status": "UNKNOWN"
+      },
+      "expected_route": "to_preclinical"
+    }
+  ]
+}

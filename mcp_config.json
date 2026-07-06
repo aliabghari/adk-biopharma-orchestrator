@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "pubmed_biocontext_mcp": {
+      "command": "python",
+      "args": ["-m", "pubmed_mcp_server"],
+      "env": {
+        "PUBMED_API_KEY_PATH": "~/.gemini/antigravity/secrets/pubmed_api.key"
+      }
+    }
+  }
+}

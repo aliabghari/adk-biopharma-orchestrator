@@ -1,0 +1,33 @@
+{
+  "reference_type": "FTO Patent Filtering Blueprint",
+  "version": "1.0.0",
+  "layer1_indication_baseline": [
+    "lung cancer",
+    "NSCLC",
+    "SCLC",
+    "bronchus",
+    "non-small cell lung",
+    "small cell lung"
+  ],
+  "layer2_therapeutic_modality": [
+    "ADC",
+    "antibody-drug conjugate",
+    "conjugate",
+    "monoclonal antibody",
+    "mab",
+    "bispecific",
+    "HER2",
+    "TROP-2",
+    "c-MET",
+    "deruxtecan",
+    "vedotin",
+    "govitecan"
+  ],
+  "exception_regulatory_milestones": [
+    "accelerated approval",
+    "fast track",
+    "breakthrough designation",
+    "CRL",
+    "Complete Response Letter"
+  ]
+}

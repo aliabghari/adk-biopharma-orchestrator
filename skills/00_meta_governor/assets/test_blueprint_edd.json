@@ -1,0 +1,32 @@
+{
+  "simulation_name": "Autonomous Triple-Agent War-Gaming Feedback Cycle",
+  "teams": {
+    "Red_Team": {
+      "role": "Attacker / Threat Actor",
+      "description": "Injects fuzzy, out-of-spec, or corrupted data payloads into bioreactor telemetry or analytical scanner logs.",
+      "payload_types": ["corrupted_purity", "invalid_aggregation", "malformed_json", "fuzz_viability"]
+    },
+    "Blue_Team": {
+      "role": "Defender / Validation Engine",
+      "description": "Monitors inputs, applies strict cGMP rules, catches deviations, and raises cGMP fault codes.",
+      "fault_codes": {
+        "CGMP-ERR-101": "Monomer purity below critical threshold",
+        "CGMP-ERR-102": "Monomer aggregation above critical threshold",
+        "CGMP-ERR-103": "Viable cell density below baseline",
+        "CGMP-ERR-500": "Malformed telemetry data format"
+      }
+    },
+    "Green_Team": {
+      "role": "Referee / Telemetry Infrastructure",
+      "description": "Orchestrates sandbox execution, logs agent trajectories, tracks path efficiency, and triggers circuit breakers."
+    }
+  },
+  "validation_loop": {
+    "steps": [
+      "Red Team generates and writes test payload",
+      "Blue Team parses and validates payload against CQA baselines",
+      "Blue Team throws specific cGMP fault codes if out-of-spec",
+      "Green Team logs trajectory score and verifies integrity"
+    ]
+  }
+}

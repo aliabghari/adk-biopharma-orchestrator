@@ -1,0 +1,16 @@
+.env
+**/.env
+.venv/
+**/__pycache__/
+.agents/
+.agent_state/hitl_pending_authorizations.json
+.agent_state/deviation_disposition_ledger.json
+
+# Compliance: Purged Log Files
+biopharma-radar/biopharma_radar.log
+biopharma-ip-watch/ip_watchdog.log
+uvicorn_sim.log
+
+# Runtime state files — not for version control
+.agent_state/
+capstone-router/.agent_state/
